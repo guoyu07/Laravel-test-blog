@@ -41,7 +41,6 @@
             <!--快捷导航 结束-->
         </div>
 
-        @include('admin.widgets.test')
         @include('admin.category.showlist_pagination')
     </form>
     <!--搜索结果页面 列表 结束-->

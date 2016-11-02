@@ -37,7 +37,7 @@ class CheckLocale {
 		}
 		$locale = Request::segment(1);
 		//语言不在允许的数组里
-		if(!array_key_exists($locale, config('app.locales'))) {
+		if(config('app.locales') && !array_key_exists($locale, config('app.locales'))) {
 			$locale = '';//初始化语言
 			//检查是否有cookie里的语言
 			if(array_get($_COOKIE, 'front_locale')) {//在cookie里

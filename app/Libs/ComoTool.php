@@ -234,4 +234,19 @@ class ComoTool {
 		}
 		return $out;
 	}
+
+	/**
+	 * 得到内容语言
+	 */
+	public static function LocaleContent() {
+		return \Illuminate\Support\Facades\App::getLocale();
+	}
+
+	/**
+	 * 得到界面语言
+	 */
+	public static function LocaleInterface() {
+		return \Xinax\LaravelGettext\Facades\LaravelGettext::getLocale();
+	}
+
 }

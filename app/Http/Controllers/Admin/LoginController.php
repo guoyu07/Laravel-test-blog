@@ -51,7 +51,7 @@ class LoginController extends Controller {
 			} else {
 				$admin = Admin::where('name', $request->input('username'))->first();
 				if(!$admin || !Hash::check($input['password'], $admin->password)) {
-					return back()->with('errors','用户名或密码错误');
+					return back()->with('errors', '用户名或密码错误');
 				}
 				session(['admin' => $admin]);
 				return redirect(route('admin.home'));
@@ -77,5 +77,9 @@ class LoginController extends Controller {
 	public function logout() {
 		session(['admin' => null]);
 		return redirect(route('front.home'));
+	}
+
+	function user($username) {
+		echo 'hello ' . $username;
 	}
 }

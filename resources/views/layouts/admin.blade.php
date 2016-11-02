@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{url('public/admin/style/css/ch-ui.admin.css')}}">
-    <link rel="stylesheet" href="{{url('public/admin/style/font/css/font-awesome.min.css')}}">
-    <script type="text/javascript" src="{{url('public/admin/style/js/jquery.js')}}"></script>
-    <script type="text/javascript" src="{{url('public/admin/style/js/ch-ui.admin.js')}}"></script>
-    <script type="text/javascript" src="{{url('public/admin/jsvalidation/js/jsvalidation.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('public/admin/style/css/ch-ui.admin.css')}}">
+    <link rel="stylesheet" href="{{asset('public/admin/style/font/css/font-awesome.min.css')}}">
+    <script type="text/javascript" src="{{asset('public/admin/style/js/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/admin/style/js/ch-ui.admin.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/admin/jsvalidation/js/jsvalidation.js')}}"></script>
     @stack('scripts')
     <script>
         $.fn.post = function (url, data, callback, type) {
@@ -75,10 +75,10 @@
         <li>
             <h3><i class="fa fa-fw fa-clipboard"></i>内容管理</h3>
             <ul class="sub_menu">
-                <li><a href="{{route('admin.category.create')}}"><i class="fa fa-fw fa-plus-square"></i>添加分类</a></li>
+                <li><a href=""><i class="fa fa-fw fa-plus-square"></i>添加分类</a></li>
                 <li><a href="{{route('admin.category.showlist')}}"><i class="fa fa-fw fa-list-ul"></i>分类列表</a></li>
-                <li><a href="{{route('admin.article.create')}}"><i class="fa fa-fw fa-plus-square"></i>添加文章</a></li>
-                <li><a href="{{route('admin.article.index')}}"><i class="fa fa-fw fa-list-ul"></i>文章列表</a></li>
+                <li><a href=""><i class="fa fa-fw fa-plus-square"></i>添加文章</a></li>
+                <li><a href=""><i class="fa fa-fw fa-list-ul"></i>文章列表</a></li>
             </ul>
         </li>
         <li>
@@ -106,7 +106,7 @@
 
 <!--底部 开始-->
 <div class="bottom_box">
-    CopyRight &copy; {{date('Y')}}. Powered By <a href="http://www.chenhua.club">http://www.chenhua.club</a>.
+    CopyRight &copy; {{date('Y')}}. Powered By <a href="http://www.comonetwork.com">http://www.comonetwork.com</a>.
 </div>
 <!--底部 结束-->
 </body>

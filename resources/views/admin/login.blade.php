@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{{url('public/admin/style/css/ch-ui.admin.css')}}">
-    <link rel="stylesheet" href="{{url('public/admin/style/font/css/font-awesome.min.css')}}">
-    <script type="text/javascript" src="{{url('public/admin/style/js/jquery.js')}}"></script>
-    <script type="text/javascript" src="{{url('public/admin/style/js/ch-ui.admin.js')}}"></script>
-    <script type="text/javascript" src="{{url('public/admin/jsvalidation/js/jsvalidation.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('public/admin/style/css/ch-ui.admin.css')}}">
+    <link rel="stylesheet" href="{{asset('public/admin/style/font/css/font-awesome.min.css')}}">
+    <script type="text/javascript" src="{{asset('public/admin/style/js/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/admin/style/js/ch-ui.admin.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/admin/jsvalidation/js/jsvalidation.js')}}"></script>
 </head>
 <body style="background:#F3F3F4;">
 <div class="login_box">
     <h1>Blog</h1>
     <h2>{{_('Hello! Welcome to the blog management platform')}}</h2>
     <div class="form">
+        <p>界面语言: {{ComoTool::LocaleInterface()}}</p>
+        <p>内容语言: {{ComoTool::LocaleContent()}}</p>
         @if(session('msg'))
             <p style="color:red">{{session('msg')}}</p>
         @endif
@@ -53,8 +55,8 @@
                 </li>
             </ul>
         </form>
-        <p><a href="{{url('')}}">返回首页</a> &copy; {{date('Y')}} Powered by <a href="http://www.chenhua.club"
-                                                                              target="_blank">http://www.chenhua.club</a>
+        <p><a href="{{url('')}}">返回首页</a> &copy; {{date('Y')}} Powered by <a href="http://www.comonetwork.com"
+                                                                              target="_blank">http://www.comonetwork.com</a>
         </p>
     </div>
 </div>

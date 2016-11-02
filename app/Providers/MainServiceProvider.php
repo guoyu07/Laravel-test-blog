@@ -19,9 +19,9 @@ class MainServiceProvider extends ServiceProvider {
 			$this->showlist_pagination($view);
 		});
 
-		view()->composer('admin.widgets.test', function($view) {
-			$view->with('widget_name', 'asdfadsf');
-		});
+//		view()->composer('admin.widgets.test', function($view) {
+//			$view->with('widget_name', 'asdfadsf');
+//		});
 	}
 
 	private function showlist_pagination($view) {

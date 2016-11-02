@@ -8,9 +8,9 @@
     <!--结果集标题与导航组件 开始-->
     <div class="result_wrap">
         <div class="result_title">
-            <p>界面语言: {{LaravelGettext::getLocale()}}</p>
-            <p>内容语言: {{App::getLocale()}}</p>
-            <h3>{{__('Modify Password')}}</h3>
+            <p>界面语言: {{ComoTool::LocaleInterface()}}</p>
+            <p>内容语言: {{ComoTool::LocaleContent()}}</p>
+            <h3>{{__('Modify Password')}} <br> {{url('/')}} <br> {{route('admin.logout')}}</h3>
             @if(count($errors)>0)
                 <div class="mark">
                     @if(is_object($errors))
